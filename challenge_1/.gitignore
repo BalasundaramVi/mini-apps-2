@@ -1,2 +1,4 @@
 ## DO NOT INCLUDE WEBPACK BUNDLE
 /client/public/c1_bundle.js
+
+## DO NOT INCLUDE NODE MODULES
