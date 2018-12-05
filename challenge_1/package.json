@@ -1,0 +1,42 @@
+{
+  "name": "challenge_1",
+  "version": "1.0.0",
+  "description": "Mini App 1 - Historical Events Finder",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack -d --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BalasundaramVi/hrsf105-mini-apps-2.git"
+  },
+  "keywords": [
+    "Mini",
+    "App",
+    "1"
+  ],
+  "author": "Vignesh Balasundaram",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BalasundaramVi/hrsf105-mini-apps-2/issues"
+  },
+  "homepage": "https://github.com/BalasundaramVi/hrsf105-mini-apps-2#readme",
+  "dependencies": {
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "webpack": "^4.27.0",
+    "webpack-cli": "^3.1.2"
+  }
+}
