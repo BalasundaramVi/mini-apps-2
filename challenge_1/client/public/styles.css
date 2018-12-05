@@ -1,17 +1,12 @@
 html {
-  background: url(https://i.imgur.com/Lh6I8O4.jpg) no-repeat center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: darkslateblue;
 }
 
 body {
   width: 95%;
   max-width: 1000px;
   margin: auto;
-  margin-top: 20px;
+  margin-top: 10px;
   height: fit-content;
 }
 
@@ -58,4 +53,55 @@ body {
   background-color: rgba(255, 255, 255, 0.7);
   margin: 0px;
   padding: 10px 5px;
+}
+
+.event {
+  background-color: white;
+  margin: 5px auto;
+  border-radius: 5px;
+  width: 95%;
+}
+
+.date {
+  border-radius: 5px 5px 0px 0px;
+  padding: 5px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.description {
+  width: 95%;
+  padding: 5px;
+  margin: auto;
+}
+
+/***** PAGINATION STYLES *****/
+ul {
+  list-style-type: none;
+}
+
+.paginate_container {
+  width: fit-content;
+  padding: 0;
+  margin: auto;
+  align-content: center;
+}
+
+.page {
+  display: inline-block;
+  padding: 5px;
+  background-color: white;
+  margin: 5px 0px;
+}
+
+.page:hover {
+  cursor: pointer;
+}
+
+.next_page, .previous_page {
+  margin: 5px;
+}
+
+.active {
+  background-color: lightblue;
 }
