@@ -1,0 +1,22 @@
+html {
+  background: url(https://i.imgur.com/Lh6I8O4.jpg) no-repeat center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body {
+  width: 95%;
+  max-width: 1000px;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.9);
+  margin-top: 20px;
+}
+
+.header {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
