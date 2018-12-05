@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Header = (props) => {
+const Header = ({ search }) => {
   return (
     <div className="header">
       <div className="intro">
@@ -8,7 +8,7 @@ const Header = (props) => {
         <h1 className="Historical_Events banner">Historical Events Finder!</h1>
       </div>
       <div className="searchbar">
-        <input className="search_input" placeholder="search history..." />
+        <input className="search_input" onKeyPress={(e) => { search(e); }} placeholder="search history..." />
       </div>
     </div>
   );
