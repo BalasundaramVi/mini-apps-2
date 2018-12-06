@@ -5,7 +5,10 @@ const Results = ({ events }) => {
     <ul className="feed">
       {events.map((event, i) => (
         <li className="event" key={`search_result_${i + 1}`}>
-          <div className="date">{event.date}</div>
+          <div className="result_top">
+            <div className="date">{event.date}</div>
+            <div className="edit">EDIT</div>
+          </div>
           <p className="description">{event.description}</p>
         </li>
       ))}

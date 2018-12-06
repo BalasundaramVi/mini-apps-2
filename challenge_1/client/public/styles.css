@@ -1,5 +1,5 @@
 html {
-  background-color: darkslateblue;
+  background-color: rgba(71, 61, 139, 0.5);
 }
 
 body {
@@ -52,7 +52,7 @@ body {
   margin: 0;
   background-color: rgba(255, 255, 255, 0.7);
   margin: 0px;
-  padding: 10px 5px;
+  padding: 5px 5px;
 }
 
 .event {
@@ -63,16 +63,35 @@ body {
 }
 
 .date {
-  border-radius: 5px 5px 0px 0px;
+  display: inline-block;
   padding: 5px;
+  margin: 0px 10px;
   color: white;
-  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.edit {
+  display: inline-block;
+  float: right;
+  color: white;
+  padding: 5px;
+  margin: 0px 10px;
+}
+
+.edit:hover {
+  color: lightblue;
+  cursor: pointer;
 }
 
 .description {
   width: 95%;
   padding: 5px;
   margin: auto;
+}
+
+.result_top {
+  border-radius: 5px 5px 0px 0px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 5px 0px;
 }
 
 /***** PAGINATION STYLES *****/
@@ -82,16 +101,14 @@ ul {
 
 .paginate_container {
   width: fit-content;
-  padding: 0;
-  margin: auto;
+  padding: 5px;
+  margin: 10px auto;
   align-content: center;
 }
 
 .page {
   display: inline-block;
-  padding: 5px;
   background-color: white;
-  margin: 5px 0px;
 }
 
 .page:hover {
@@ -99,9 +116,24 @@ ul {
 }
 
 .next_page, .previous_page {
-  margin: 5px;
+  margin: 10px;
+}
+
+.next_page {
+  border-radius: 1px 5px 5px 1px;
+}
+
+.previous_page {
+  border-radius: 5px 1px 1px 5px;
 }
 
 .active {
-  background-color: lightblue;
+  background-color: rgba(0, 0, 255, 0.5);
+  color: white;
+}
+
+a {
+  display: inline-block;
+  padding: 10px;
+  font-size: 18px;
 }

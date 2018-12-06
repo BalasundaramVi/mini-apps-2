@@ -17,15 +17,17 @@ class App extends React.Component {
       events: [],
       query: '',
       pages: 0,
+      currentPage: 0,
     };
   }
 
-  handlePageClick(data) {
+  handlePageClick(data, { query } = this.state, cb) {
     const selected = data.selected + 1;
-    const { query } = this.state;
     axios.get(`/events?_page=${selected}&_limit=10&q=${query}`)
       .then((res) => {
-        this.setState({ events: res.data });
+        const pgs = Math.floor((res.headers['x-total-count']) / 10) + 1;
+        this.setState({ events: res.data, query, pages: pgs });
+        cb();
       });
   }
 
@@ -33,16 +35,13 @@ class App extends React.Component {
     if (event.key !== 'Enter') {
       return;
     }
-    const query = event.target.value;
-    axios.get(`/events?q=${query}`)
-      .then((data) => {
-        const pgs = Math.floor(data.data.length / 10) + 1;
-        this.setState({ events: data.data.slice(0, 10), query, pages: pgs });
-      });
+    this.handlePageClick({ selected: 0 }, { query: event.target.value }, () => {
+      this.setState({ currentPage: 0 });
+    });
   }
 
   render() {
-    const { events, pages } = this.state;
+    const { events, pages, currentPage } = this.state;
     return (
       <div className="application">
         <Header search={this.search} />
@@ -51,7 +50,7 @@ class App extends React.Component {
           <ReactPaginate
             previousLabel="previous"
             nextLabel="next"
-            marginPagesDisplayed={2}
+            marginPagesDisplayed={1}
             pageRangeDisplayed={4}
             pageCount={pages}
             onPageChange={this.handlePageClick}
@@ -60,6 +59,8 @@ class App extends React.Component {
             activeClassName="active"
             previousClassName="previous_page page"
             nextClassName="next_page page"
+            breakClassName="break_page page"
+            initialPage={currentPage}
           />
         ) : ''}
       </div>
