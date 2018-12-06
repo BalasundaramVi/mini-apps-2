@@ -7,13 +7,12 @@ module.exports = {
     path: path.join(__dirname, './client/public'),
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx', '.scss'],
   },
   module: {
     rules: [
       {
         test: /\.jsx?/,
-        include: path.join(__dirname, './client/src'),
         loader: 'babel-loader',
         options: {
           presets: ['@babel/preset-env', '@babel/preset-react'],
