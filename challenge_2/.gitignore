@@ -1,0 +1,8 @@
+## DO NOT INCLUDE WEBPACK BUNDLE
+/client/public/c2_bundle.js
+
+## DO NOT INCLUDE NODE MODULES
+node_modules
+
+## DO NOT INCLUDE ENV FILES
+.env
