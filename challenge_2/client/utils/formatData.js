@@ -1,4 +1,4 @@
-export default function (rawdata, currency) {
+export default function (rawdata) {
   const labels = Object.keys(rawdata.bpi);
   const data = [];
   labels.forEach((label) => {
