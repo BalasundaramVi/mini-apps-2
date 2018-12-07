@@ -20,7 +20,7 @@ app.post('/cryptoData', (req, res) => {
   const {
     index, currency, start, end,
   } = req.body;
-  const query = `index=[${index}]&currency=${currency}&start=${start}&end=${end}`
+  const query = `index=[${index}]&currency=${currency}&start=${start}&end=${end}`;
   axios.get(`https://api.coindesk.com/v1/bpi/historical/close.json?${query}`)
     .then((data) => {
       res.send(data.data);

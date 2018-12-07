@@ -21,7 +21,6 @@ const getCurrentDate = () => {
 };
 
 class Options extends React.Component {
-
   constructor(props) {
     super(props);
 
@@ -91,11 +90,9 @@ class Options extends React.Component {
           <h5 className="currency_choice input_header">Currency:</h5>
           <form className="currency_choices">
             <select name="currency" onChange={this.handleChange}>
-              {currencies.map((currency, index) => {
-                return (
-                  <option key={`currency_${index + 1}`} value={currency} className={`currency_option option_${index}`}>{currency}</option>
-                );
-              })}
+              {currencies.map((c, i) => (
+                <option key={`currency_${index + 1}`} value={c} className={`currency_option option_${i}`}>{c}</option>
+              ))}
             </select>
           </form>
         </div>
@@ -114,10 +111,10 @@ class Options extends React.Component {
           </form>
         </div>
 
-        <div role="button" onClick={() => { getData('line', index, currency, startDate, endDate); }} value="submitResults">SUBMIT</div>
+        <div role="button" tabIndex="-1" onKeyDown={() => {}} onClick={() => { getData('line', index, currency, startDate, endDate); }} value="submitResults">SUBMIT</div>
       </div>
     );
   }
-};
+}
 
 export default Options;
