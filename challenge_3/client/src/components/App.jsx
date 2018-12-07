@@ -1,20 +1,24 @@
 import React from 'react';
 
+import Board from './Board';
+import Header from './Header';
+
 class App extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
       score: 'SCORE',
+      board: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     };
   }
 
   render() {
-    const { score } = this.state;
+    const { score, board } = this.state;
     return (
       <div className="game">
-        <div className="header">HEADER</div>
-        <div className="board">BOARD</div>
+        <Header />
+        <Board board={board} />
         <div className="score">{score}</div>
       </div>
     );
