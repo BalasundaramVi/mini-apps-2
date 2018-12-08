@@ -1,0 +1,8 @@
+## NODE MODULES
+/node_modules
+
+## WEBPACK BUNDLE
+/client/public/c3_bundle.js
+
+## .env file
+.env
