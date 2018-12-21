@@ -2,7 +2,7 @@
 /node_modules
 
 ## WEBPACK BUNDLE
-/client/public/c3_bundle.js
+/client/public/c4_bundle.js
 
 ## .env file
 .env
