@@ -1,2 +1,0 @@
-import Redux from 'redux';
-
