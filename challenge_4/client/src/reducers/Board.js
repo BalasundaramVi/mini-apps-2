@@ -1,6 +1,6 @@
 import boardMaker from '../utils/boardMaker';
 
-const updateBoardReducer = (state, action) => {
+const BoardReducer = (state, action) => {
   switch (action.type) {
     case 'MAKE_NEW_BOARD':
       return boardMaker(action.rows, action.cols, action.mines);
@@ -11,4 +11,4 @@ const updateBoardReducer = (state, action) => {
   }
 };
 
-export default updateBoardReducer;
+export default BoardReducer;
