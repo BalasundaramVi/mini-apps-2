@@ -14,7 +14,7 @@ const App = ({
 
     <div className="new_game_form">
       <h3>Create New Game</h3>
-      <form>
+      <div className="create_game_details">
         <div className="new_game_rows">
           <label>Rows: </label>
           <input onChange={e => handleRowChange(e.target.value)} type="number" id="rows" name="rows" min="0" max="100" />
@@ -27,8 +27,8 @@ const App = ({
           <label>Mines: </label>
           <input onChange={e => handleMineChange(e.target.value)} type="number" id="cols" name="cols" min="0" />
         </div>
-        <button type="submit" onClick={() => { startNewGame(rows, cols, mineCount); }}>Create Game</button>
-      </form>
+        <button onClick={() => { startNewGame(rows, cols, mineCount); }}>Create Game</button>
+      </div>
     </div>
 
     <br />

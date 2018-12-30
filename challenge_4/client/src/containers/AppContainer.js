@@ -32,8 +32,8 @@ const mapDispatchToProps = dispatch => ({
   },
 
   startNewGame: (rows, cols, mineCount) => {
-    dispatch(createBoard(rows, cols, mineCount));
     dispatch(startNewGame(mineCount));
+    dispatch(createBoard(rows, cols, mineCount));
   },
 });
 
