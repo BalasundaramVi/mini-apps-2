@@ -2,15 +2,12 @@ import React from 'react';
 
 import Row from './Row';
 
-const Board = ({ board }) => {
-  console.log(board);
-  return (
-    <ol className="game-board">
-      {board.map((row, i) => (
-        <Row row={row} rowNum={i} />
-      ))}
-    </ol>
-  );
-};
+const Board = ({ board }) => (
+  <ol className="game-board">
+    {board.map((row, i) => (
+      <Row row={row} rowNum={i} />
+    ))}
+  </ol>
+);
 
 export default Board;
