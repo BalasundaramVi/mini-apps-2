@@ -5,9 +5,10 @@ const createBoard = (rows, cols, mines) => ({
   mines,
 });
 
-const updateBoard = board => ({
-  type: 'UPDATE_BOARD',
-  board,
+const updateBoard = (row, col) => ({
+  type: 'REVEAL_SPACE',
+  row,
+  col,
 });
 
 export { createBoard, updateBoard };
