@@ -1,3 +1,65 @@
 html, body {
-  background-color: grey;
+  background-color: blanchedalmond;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 95%;
+  max-width: 1000px;
+  border: 2px solid black;
+}
+
+h1 {
+  text-align: center;
+}
+
+h4 {
+  padding: 0;
+  margin: 0;
+}
+
+.board-container {
+  margin: auto;
+  width: fit-content;
+}
+
+.game-board {
+  list-style-type: none;
+  margin: auto;
+  width: auto;
+  padding: 10px;
+}
+
+.col {
+  display: inline-block;
+}
+
+.row {
+  margin: 0;
+  padding: 0;
+  height: 45px;
+}
+
+.field {
+  border-top: 2px solid black;
+}
+
+.square {
+  margin: 2px;
+  padding: 5px;
+  border: 2px solid black;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  font-size: 20px;
+  background-color: rgba(160, 81, 45, 0.2);
+}
+
+.square:hover {
+  cursor: pointer;
+  background-color: lightgreen;
 }

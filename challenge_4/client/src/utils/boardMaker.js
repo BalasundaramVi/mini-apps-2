@@ -1,4 +1,4 @@
-const boardMaker = (r, c, m) => {
+const boardMaker = (r = '20', c = '20', m = '75') => {
   const rows = Number(r);
   const cols = Number(c);
   const mines = Number(m);
@@ -34,6 +34,7 @@ const boardMaker = (r, c, m) => {
     const row = Math.floor((mineSpaces[k]) / rows);
     const col = (mineSpaces[k] % rows);
     board[row][col].mine = true;
+    board[row][col].num = 'X';
 
     for (let rowIndex = row - 1; rowIndex <= row + 1; rowIndex += 1) {
       if (rowIndex < rows && rowIndex >= 0) {

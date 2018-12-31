@@ -17,23 +17,26 @@ const App = ({
       <div className="create_game_details">
         <div className="new_game_rows">
           <label>Rows: </label>
-          <input onChange={e => handleRowChange(e.target.value)} type="number" id="rows" name="rows" min="0" max="100" />
+          <input onChange={e => handleRowChange(e.target.value)} type="number" placeholder="20" id="rows" name="rows" min="0" max="20" />
         </div>
         <div className="new_game_cols">
           <label>Columns: </label>
-          <input onChange={e => handleColChange(e.target.value)} type="number" id="cols" name="cols" min="0" max="100" />
+          <input onChange={e => handleColChange(e.target.value)} type="number" id="cols" placeholder="20" name="cols" min="0" max="20" />
         </div>
         <div className="new_game_mines">
           <label>Mines: </label>
-          <input onChange={e => handleMineChange(e.target.value)} type="number" id="cols" name="cols" min="0" />
+          <input onChange={e => handleMineChange(e.target.value)} type="number" id="cols" placeholder="75" name="cols" min="0" />
         </div>
         <button onClick={() => { startNewGame(rows, cols, mineCount); }}>Create Game</button>
       </div>
     </div>
 
     <br />
-
-    <BoardContainer />
+    <div className="field">
+      <div className="board-container">
+        <BoardContainer />
+      </div>
+    </div>
   </div>
 );
 
