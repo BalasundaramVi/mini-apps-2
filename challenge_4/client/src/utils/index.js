@@ -71,7 +71,9 @@ const revealSpace = (b, row, col, newBoard) => {
     for (let rowIndex = row - 1; rowIndex <= row + 1; rowIndex += 1) {
       if (rowIndex < board.length && rowIndex >= 0) {
         for (let colIndex = col - 1; colIndex <= col + 1; colIndex += 1) {
-          if ((colIndex < board[rowIndex].length && colIndex >= 0) && !(rowIndex === row && colIndex === col) && (board[rowIndex][colIndex].revealed !== true)) {
+          if ((colIndex < board[rowIndex].length && colIndex >= 0)
+          && !(rowIndex === row && colIndex === col)
+          && (board[rowIndex][colIndex].revealed !== true)) {
             revealSpace(b, rowIndex, colIndex, board);
           }
         }
