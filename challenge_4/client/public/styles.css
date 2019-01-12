@@ -14,13 +14,23 @@ html, body {
   min-width: 950px;
 }
 
+.new_game_form {
+  width: 200px;
+  margin: auto;
+}
+
 h1 {
   text-align: center;
+  margin: 10px 0px;
 }
 
 h4 {
   padding: 0;
   margin: 0;
+}
+
+h3 {
+  margin: 10px 0px;
 }
 
 .board-container {
